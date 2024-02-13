@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEAH FOR U!!!!</title>
+    <style>
+        body {
+            background-color: #ffe6f2; /* Нежно-розовый фон */
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #heartContainer {
+            position: relative;
+            text-align: center;
+        }
+
+        #heart {
+            color: red;
+            font-size: 5em;
+            animation: heartbeat 1s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        #greeting {
+            font-size: 2em;
+            color: #ff69b4; /* Розовый цвет текста */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #buttonsContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+        .button {
+            background-color: #ffb7dc; /* Нежно-розовый цвет кнопки */
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #a3667a; /* Темно-розовая обводка */
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-right: 0px;
+            margin-bottom: 10px
+        }
+
+        #NextPageButtonContainer {
+    margin-top: 20px; /* Отступ между словом 'странице' и кнопкой 'Back?' */
+}
+
+        #kittensContainer {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .kitten {
+            width: 15%;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        #secondPage {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #squareContainer {
+            background-color: #ffe6f2; /* Нежно-розовый фон */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #squareText {
+            font-size: 2em;
+            color: #ff69b4; /* Розовый цвет текста */
+            font-weight: bold;
+        }
+
+        #buttonsContainer {
+            margin-top: 20px;
+        }
+
+        #noTextContainer {
+            background: #ffe6f2; /* Нежно-розовый фон */
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        #noText {
+            font-size: 1.5em;
+            color: #ff69b4; /* Розовый цвет текста */
+            font-weight: bold;
+        }
+
+        #kittenImg {
+            width: 90px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #thirdPage {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        #openingBox {
+            width: 250px;
+            height: 230px;
+            background-color: #ffc2e0; /* Розовый цвет коробки */
+            border: 5px solid #96596d; /* Темно-розовая рамка коробки */
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        #boxText {
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            animation: floatIn 3s ease-in-out;
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #flowerContainer {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        #flower {
+            width: 150px;
+        }
+
+        #backToSecondButtonContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="heartContainer">
+        <div id="heart">❤</div>
+        <div id="greeting">HAPPY DAY MY VALENTINE,<br>love u Alinoook</div>
+        <div id="kittensContainer">
+            <img class="kitten" src="https://pbs.twimg.com/profile_images/1718272335449595904/sGolVmX2_400x400.jpg" alt="Котик 1">
+            <img class="kitten" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFqDb1RBqF_UrMUGTduZAn-135CNc1Z0DYsw&usqp=CAU" alt="Котик 2">
+            <img class="kitten" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXiIJas-uF30aHidB6YHrFfmjtUdZdrMhMl-GeyH9izFRgBQ5No0c8IP0j0xXjoC7lsE&usqp=CAU" alt="Котик 3">
+        </div>
+    </div>
+    <div id="buttonContainer">
+        <button class="button" onclick="openSecondPage()">Click me</button>
+    </div>
+
+    <!-- Вторая страница -->
+    <div id="secondPage">
+        <div id="squareContainer">
+            <div id="squareText">I tried for youuu</div>
+            <div id="buttonsContainer">
+                <button class="button" onclick="openThirdPage()">Click me dura!!</button>
+                <button class="button" onclick="showNoText()">Back?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Третья страница -->
+    <div id="thirdPage">
+    <div id="openingBox">
+        <div id="boxText">You are the best Alina, my comfort and the one with whom I can talk for a long time about everything, thank you for being there(( </div>
+    </div>
+   
+    <div id="backToSecondButtonContainer">
+        <button class="button" onclick="goBackToSecondPage()">Back back</button>
+    </div>
+</div>
+
+<script>
+    function openSecondPage() {
+        // Скрываем первую страницу
+        document.getElementById('heartContainer').style.display = 'none';
+        document.getElementById('buttonContainer').style.display = 'none';
+
+        // Показываем вторую страницу
+        document.getElementById('secondPage').style.display = 'flex';
+
+        // Скрываем текст после кнопки "Back?"
+        hideNoText();
+    }
+
+    function openThirdPage() {
+        // Скрываем вторую страницу
+        document.getElementById('secondPage').style.display = 'none';
+
+        // Показываем третью страницу
+        document.getElementById('thirdPage').style.display = 'flex';
+    }
+
+    function showNoText() {
+        // Показываем текст в маленьком квадрате с котиком
+        // ... (ваш код)
+
+        // Показываем текст после кнопки "Back?"
+        var noTextContainer = document.createElement("div");
+        noTextContainer.id = "noTextContainer";
+        noTextContainer.style.background = "#ffe6f2"; /* Нежно-розовый фон */
+        noTextContainer.style.padding = "20px";
+        noTextContainer.style.borderRadius = "10px";
+        noTextContainer.style.display = "flex";
+        noTextContainer.style.flexDirection = "column";
+        noTextContainer.style.alignItems = "center";
+        noTextContainer.style.justifyContent = "center";
+        noTextContainer.style.position = "absolute";
+        noTextContainer.style.bottom = "10px";
+        noTextContainer.style.width = "100%";
+
+        var noText = document.createElement("div");
+        noText.innerHTML = 'NO! please continue ((';
+        noText.id = "noText";
+        noText.style.fontSize = "1.5em";
+        noText.style.color = "#ff69b4"; /* Розовый цвет текста */
+        noText.style.fontWeight = "bold";
+        noTextContainer.appendChild(noText);
+
+        var kittenImg = document.createElement("img");
+        kittenImg.src = "https://placekitten.com/50/50";
+        kittenImg.alt = "Котик";
+        kittenImg.id = "kittenImg";
+        kittenImg.style.width = "50px"; /* Уменьшен размер картинки с котиком */
+        kittenImg.style.borderRadius = "10px";
+        kittenImg.style.marginTop = "10px";
+        noTextContainer.appendChild(kittenImg);
+
+        document.body.appendChild(noTextContainer);
+    }
+
+    function hideNoText() {
+        // Скрываем текст после кнопки "Back?"
+        var noTextContainer = document.getElementById('noTextContainer');
+        if (noTextContainer) {
+            noTextContainer.style.display = 'none';
+        }
+    }
+
+    function goBack() {
+        // Скрываем вторую страницу
+        document.getElementById('secondPage').style.display = 'none';
+
+        // Показываем первую страницу
+        document.getElementById('heartContainer').style.display = 'flex';
+        document.getElementById('buttonContainer').style.display = 'block';
+    }
+
+    function goBackToSecondPage() {
+        // Скрываем третью страницу
+        document.getElementById('thirdPage').style.display = 'none';
+
+        // Показываем вторую страницу
+        document.getElementById('heartContainer').style.display = 'flex';
+            document.getElementById('buttonContainer').style.display = 'block';
+
+        // Скрываем текст после кнопки "Back?"
+        hideNoText();
+    }
+</script>
+</body>
+</html>
